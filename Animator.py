@@ -84,7 +84,7 @@
     - Create Python3 version of module. 
 """
 
-__version__ = '0.1.0'
+__version__ = '0.1.01'
 __author__ = 'Kenneth McIntyre'
 
 import os
@@ -195,7 +195,9 @@ class Frame(object):
             frameElement = [curFrame['image'][x] for x in range(objCount)]
             frameElement = [self._flipSprite(frameElement[x], curFrame['flip'][x]) for x in range(objCount)]		
             frameElement = [self._scaleSprite(frameElement[x], curFrame['scale'][x]) for x in range(objCount)]
-            frameElement = [self._rotateSprite(frameElement[x], curFrame['rotation'][x]) for x in range(objCount)]	
+            unPack = [self._rotateSprite(frameElement[x], curFrame['rotation'][x], curFrame['position'][x]) for x in range(objCount)]
+            frameElement = [elem[0] for elem in unPack]
+            curFrame['position'] = [elem[1] for elem in unPack]
             frameElement = [self._alphaSprite(frameElement[x], curFrame['alpha'][x]) for x in range(objCount)]
             frame = np.ones((frameElement[0].shape), dtype = np.uint8) * 255
             for i in range(objCount):				
@@ -224,23 +226,25 @@ class Frame(object):
         spriteScaled[:, :, 2] = np.kron(sprite[:, :, 2], scaleArray)
         return spriteScaled
 
-    def _rotateSprite(self, sprite, rotation):
+    def _rotateSprite(self, sprite, rotation, position):
         """Rotates the sprite image 
 
            Rotation is in degrees where positive values produce a
            counter-clockwise rotation.
         """
         [rowCount, columnCount, BGR] = sprite.shape		
-        (cX, cY) = (columnCount // 2, rowCount // 2)
-        rotationMatrix = cv2.getRotationMatrix2D((cX, cY), rotation, 1)
+        (cXR, cYR) = (columnCount // 2, rowCount // 2)
+        (cXA, cYA) = (position[0] + cXR, position[1] + cYR)
+        rotationMatrix = cv2.getRotationMatrix2D((cXR, cYR), rotation, 1)
         cos = np.abs(rotationMatrix[0, 0])
         sin = np.abs(rotationMatrix[0, 1])
         newWidth = int(round((rowCount * sin) + (columnCount * cos)))
         newHeight = int(round((rowCount * cos) + (columnCount * sin)))
-        rotationMatrix[0, 2] += (newWidth / 2) - cX
-        rotationMatrix[1, 2] += (newHeight / 2) - cY
+        newPos = (cXA - (newWidth // 2) , cYA - (newHeight // 2))
+        rotationMatrix[0, 2] += (newWidth / 2) - cXR
+        rotationMatrix[1, 2] += (newHeight / 2) - cYR
         spriteRotated = cv2.warpAffine(sprite, rotationMatrix, (newWidth, newHeight))
-        return spriteRotated
+        return (spriteRotated, newPos)
 
     def _alphaSprite(self, sprite, alpha):
         """Adds an alpha channel to a sprite image with specified transparency."""
@@ -270,11 +274,11 @@ class Frame(object):
         cropSpriteX1 = 0
         cropSpriteX2 = columnCount				
         if cropY1 < 0:
-            cropY1 = 0
             cropSpriteY1 = -cropY1
+            cropY1 = 0
         if cropX1 < 0:
-            cropX1 = 0
-            cropSpriteX1 = -cropX1				
+            cropSpriteX1 = -cropX1
+            cropX1 = 0				
         if cropY2 > frame.shape[0]:
             cropSpriteY2 = rowCount - (cropY2 - frame.shape[0])
             cropY2 = frame.shape[0]
