@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 
-from SpriteTools import Animator
-from SpriteTools import Extractor
+from sprite_tools import Animator
+from sprite_tools import Extractor
