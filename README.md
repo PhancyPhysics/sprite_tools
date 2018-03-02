@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-A Python package used to extract, create, and animate sprites.
+A Python package used to extract, create, and animate sprites. Here's an [example animation](https://youtu.be/KiZyHv39HqM) using the animator module in this package. 
 
 ## Description
 
