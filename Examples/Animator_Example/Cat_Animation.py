@@ -4,7 +4,7 @@ import sys, os
 
 sys.path.append((os.path.abspath(os.path.join('..', '..'))))
 
-from Animator import Frame, FrameElement
+from animator import Frame, FrameElement
 
 # The purpose of this script is to demonstrate the functionality of the
 # animator module by walking through the creation of the Cat_Animation
