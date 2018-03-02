@@ -1,6 +1,6 @@
-Metadata-Version: 1.0
+Metadata-Version: 1.1
 Name: sprite-tools
-Version: 0.1
+Version: 0.1.0
 Summary: Used to extract, create, and animate sprites
 Home-page: https://github.com/PhancyPhysics/sprite_tools
 Author: Kenneth McIntyre
@@ -90,7 +90,7 @@ Description: sprite\_tools
         
         -  Python Version: 2.7
         
-        -  Module Dependencies: NumPy, cv2, SciPy, os, re
+        -  Module Dependencies: NumPy, openCV-python (cv2), SciPy, os, re
         
         Installing
         ~~~~~~~~~~
@@ -99,7 +99,7 @@ Description: sprite\_tools
         extracted from GitHub, Use the terminal to navigate to the directory
         where the sprite\_tools folder was saved to. Give the setup.py script
         permission to execute and then install the sprite\_tools package to
-        Python using the following terminal command: (to be implemented)
+        Python using the following terminal command:
         
         ::
         
@@ -109,7 +109,7 @@ Description: sprite\_tools
         Cat\_Animation.py script.
         
         The package can also be installed through the Python Package Index using
-        the following terminal command: (to be implemented)
+        the following terminal command:
         
         ::
         
@@ -205,4 +205,11 @@ Description: sprite\_tools
            `PurpleBooth <https://gist.github.com/PurpleBooth/109311bb0361f32d87a2>`__
            for the readme.md template.
         
+Keywords: sprite frame animator animation extractor graphics transform
 Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Multimedia :: Graphics :: Editors :: Raster-Based
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Natural Language :: English

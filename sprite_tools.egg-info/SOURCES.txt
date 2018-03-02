@@ -1,6 +1,6 @@
-sprite_tools/Animator.py
-sprite_tools/Extractor.py
 sprite_tools/__init__.py
+sprite_tools/animator.py
+sprite_tools/extractor.py
 sprite_tools.egg-info/PKG-INFO
 sprite_tools.egg-info/SOURCES.txt
 sprite_tools.egg-info/dependency_links.txt
