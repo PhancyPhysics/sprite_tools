@@ -31,7 +31,7 @@ animation.
 
 * Python Version: 2.7
 
-* Module Dependencies: NumPy, cv2, SciPy, os, re
+* Module Dependencies: NumPy, openCV-python (cv2), SciPy, os, re
 
 ### Installing
 
