@@ -9,7 +9,7 @@ except (IOError, ImportError):
     longDesc = open('README.md').read()
 
 setup(name='sprite_tools',
-    version = '0.1',
+    version = '0.1.0',
     description = 'Used to extract, create, and animate sprites',
     long_description = longDesc,
     url = 'https://github.com/PhancyPhysics/sprite_tools',
