@@ -1,0 +1,9 @@
+sprite_tools/Animator.py
+sprite_tools/Extractor.py
+sprite_tools/__init__.py
+sprite_tools.egg-info/PKG-INFO
+sprite_tools.egg-info/SOURCES.txt
+sprite_tools.egg-info/dependency_links.txt
+sprite_tools.egg-info/not-zip-safe
+sprite_tools.egg-info/requires.txt
+sprite_tools.egg-info/top_level.txt
