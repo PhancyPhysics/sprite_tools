@@ -25,10 +25,6 @@ background.addNewEvent('exist', './Sprites/Background/Scene_1')
 bowl = FrameElement()
 bowl.addNewEvent('exist', './Sprites/Bowl/Exist')
 
-# Initialize Exclamation Point
-exclamPoint = FrameElement()
-exclamPoint.addNewEvent('exist', './Sprites/Exclamation_Point/')
-
 # Initialize Cat
 cat = FrameElement()
 cat.addNewEvent('sitting', './Sprites/Cat/Sitting')
