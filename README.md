@@ -39,7 +39,7 @@ If the package is cloned from the Git repository or downloaded and extracted
 from GitHub, Use the terminal to navigate to the directory where the
 sprite_tools folder was saved to. Give the setup.py script permission to 
 execute and then install the sprite\_tools package to Python using the 
-following terminal command: (to be implemented)      
+following terminal command:      
 
 ```
 python setup.py install
@@ -48,7 +48,7 @@ python setup.py install
 Running the setup.py script is not necessary to execute the example Cat_Animation.py script. 
 
 The package can also be installed through the Python Package Index using the
-following terminal command: (to be implemented)
+following terminal command:
 
 ```
 pip install sprite_tools
