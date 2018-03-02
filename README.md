@@ -102,6 +102,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 * [Joakim Sandberg](http://www.konjak.org) for producing Iconoclasts with its beautiful sprite work.
 * [Peter Bone](https://www.youtube.com/user/peterboneg)  for introducing me to sprite animations through the implementation of sprites in version 3-Beta of [Pivot Animator](http://pivotanimator.net). 
 * Billie Thompson - [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) for the readme.md template.
-
-
-
