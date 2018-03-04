@@ -7,6 +7,7 @@ Author: Kenneth McIntyre
 Author-email: kennethianmcintyre@gmail.com
 License: MIT
 Download-URL: https://github.com/PhancyPhysics/sprite_tools/archive/0.1.0.tar.gz
+Description-Content-Type: UNKNOWN
 Description: sprite\_tools
         =============
         
@@ -104,13 +105,28 @@ Description: sprite\_tools
         
         ::
         
-            python setup.py install
+            sudo python setup.py install
         
-        Running the setup.py script is not necessary to execute the example
+        If permission to write into the previous installation directory is
+        denied, then try this terminal command:
+        
+        ::
+        
+            python setup.py install --user
+        
+        Although these commands are needed to use this package in any directory,
+        running the setup.py script is not necessary to execute the example
         Cat\_Animation.py script.
         
-        The package can also be installed through the Python Package Index using
-        the following terminal command:
+        The package can also be installed with the following terminal command at
+        the directory of the sprite\_tools folder:
+        
+        ::
+        
+            pip install sprite_tools
+        
+        If it is desired to install the package through the Python Package
+        Index, then use the following terminal command (to be implemented)
         
         ::
         
