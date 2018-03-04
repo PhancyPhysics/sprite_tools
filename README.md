@@ -35,20 +35,27 @@ animation.
 
 ### Installing
 
-If the package is cloned from the Git repository or downloaded and extracted
-from GitHub, Use the terminal to navigate to the directory where the
-sprite_tools folder was saved to. Give the setup.py script permission to 
-execute and then install the sprite\_tools package to Python using the 
-following terminal command:      
+If the package is cloned from the Git repository or downloaded and extracted from GitHub, Use the terminal to navigate to the directory where the sprite_tools folder was saved to. Give the setup.py script permission to execute and then install the sprite\_tools package to Python using the following terminal command:      
 
 ```
-python setup.py install
+sudo python setup.py install
 ```
+
+If permission to write into the previous installation directory is denied, then try this terminal command:
   
-Running the setup.py script is not necessary to execute the example Cat_Animation.py script. 
+```
+python setup.py install --user
+```
 
-The package can also be installed through the Python Package Index using the
-following terminal command:
+Although these commands are needed to use this package in any directory, running the setup.py script is not necessary to execute the example Cat_Animation.py script. 
+
+The package can also be installed with the following terminal command at the directory of the sprite_tools folder:
+
+```
+pip install sprite_tools
+```
+
+If it is desired to install the package through the Python Package Index, then use the following terminal command (to be implemented)
 
 ```
 pip install sprite_tools

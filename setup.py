@@ -28,7 +28,5 @@ setup(name='sprite_tools',
     keywords = 'sprite frame animator animation extractor graphics transform',
     install_requires = ['opencv-python','numpy','scipy'],
     packages = ['sprite_tools'],
-    include_package_data=True,
+    include_package_data = True,
     zip_safe = False)
-
-

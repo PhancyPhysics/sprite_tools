@@ -1,3 +1,4 @@
+setup.py
 sprite_tools/__init__.py
 sprite_tools/animator.py
 sprite_tools/extractor.py
