@@ -95,7 +95,7 @@ The extractor module is a loosely connected set of methods used to extract sprit
 
 ## Authors
 
-* **Kenneth McIntyre** - *Initial work* - [PhancyPhysics](https://github.com/PhancyPhysics)
+* **Kimberly McIntyre** - *Initial work* - [PhancyPhysics](https://github.com/PhancyPhysics)
 
 See also the list of contributors (to be added) who participated in this project.
 

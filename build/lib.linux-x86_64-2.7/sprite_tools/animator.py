@@ -85,7 +85,7 @@
 """
 
 __version__ = '0.1.01'
-__author__ = 'Kenneth McIntyre'
+__author__ = 'Kimberly McIntyre'
 
 import os
 
